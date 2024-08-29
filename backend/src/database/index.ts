@@ -1,3 +1,3 @@
 export { PostRepository } from "./repository/PostRepository";
-export { Repository } from "./repository/Repository";
-export { Post, PostModel } from "./model/Post";
+export * from "./repository/Repository";
+export * from "./model/Post";
