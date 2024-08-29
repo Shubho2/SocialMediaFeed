@@ -13,10 +13,12 @@
     "clean": "rm -rf ./build",
     "build-ts": "tsc",
     "watch": "nodemon src/index.ts",
-    "start-ts": "ts-node src/index.ts"
+    "start-ts": "ts-node src/index.ts",
+    "bun": "bun src/index.ts"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
+    "bun": "^1.1.26",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.17.1",
