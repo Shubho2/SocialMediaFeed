@@ -1,6 +1,6 @@
 import ACTION_TYPES from "../constants/actionTypes";
 
-const reducer = (posts = [], action) => {
+const postReducer = (posts = [], action) => {
     switch (action.type) {
         case ACTION_TYPES.FETCH_ALL:
             return action.payload;
@@ -16,4 +16,4 @@ const reducer = (posts = [], action) => {
     }
 };
 
-export default reducer;
+export default postReducer;

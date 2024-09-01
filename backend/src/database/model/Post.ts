@@ -4,13 +4,14 @@ const DOC_NAME = 'Post';
 const COLLECTION_NAME = 'posts';
 
 interface Post {
-    title: string,
-    message: string,
-    creator: string,
-    tags: [string],
-    selectedFile: string,
-    likeCount: number,
-    createdAt: Date
+    title: string;
+    message: string;
+    name: string;
+    creator: string;
+    tags: [string];
+    selectedFile: string;
+    likes: string[];
+    createdAt: Date;
 } 
 
 const postSchema =  new Schema<Post>({
@@ -24,6 +25,11 @@ const postSchema =  new Schema<Post>({
         trim: true,
         maxlength: 2000,
     },
+    name: {
+        type: Schema.Types.String,
+        trim: true,
+        maxlength: 50,
+    },
     creator: {
         type: Schema.Types.String,
         trim: true,
@@ -36,9 +42,9 @@ const postSchema =  new Schema<Post>({
     selectedFile: {
         type: Schema.Types.String,
     },
-    likeCount: {
-        type: Schema.Types.Number,
-        default: 0
+    likes: {
+        type: [Schema.Types.String],
+        default: [],
     },
     createdAt: {
         type: Schema.Types.Date,

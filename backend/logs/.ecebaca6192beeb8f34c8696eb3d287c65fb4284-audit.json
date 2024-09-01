@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 10
+    },
+    "auditLog": "/Users/i517030/Documents/JavaScriptTutorials/SocialMediaFeed/backend/logs/.ecebaca6192beeb8f34c8696eb3d287c65fb4284-audit.json",
+    "files": [
+        {
+            "date": 1725212657886,
+            "name": "/Users/i517030/Documents/JavaScriptTutorials/SocialMediaFeed/backend/logs/2024-09-01.log",
+            "hash": "eec45de13f9d02976f7375721017d5b2fbd9e169642937e1e40ec991fdfc2b80"
+        }
+    ],
+    "hashType": "sha256"
+}

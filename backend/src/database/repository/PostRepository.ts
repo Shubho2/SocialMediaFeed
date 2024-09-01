@@ -1,21 +1,7 @@
 import { Post, PostModel } from '../model/Post';
 import { Repository } from './Repository';
-import mongoose from 'mongoose';
 
-export class PostRepository implements Repository<Post> {
-
-    constructor() {
-        if (!process.env.CONNECTION_URI) {
-            throw new Error('Database connection URI is not set');
-        }
-        mongoose.connect(process.env.CONNECTION_URI)
-            .then(() => console.log('Connected to the database'))
-            .catch((error) => console.log(error.message));
-    }
-
-    isValid(_id: string): boolean {
-        return mongoose.Types.ObjectId.isValid(_id);
-    }
+export class PostRepository extends Repository<Post> {
 
     /**
      * 
@@ -23,7 +9,6 @@ export class PostRepository implements Repository<Post> {
      * @returns 
      */
     async create(object: Post): Promise<Post> {
-        console.log(`PostRepository: ${object}`);
         return await PostModel.create(object);
     }
 

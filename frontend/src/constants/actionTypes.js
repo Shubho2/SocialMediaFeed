@@ -3,7 +3,9 @@ const ACTION_TYPES = Object.freeze({
     UPDATE: "UPDATE",
     DELETE: "DELETE",
     FETCH_ALL: "FETCH_ALL",
-    LIKE: "LIKE"
+    LIKE: "LIKE",
+    AUTH: "AUTH",
+    LOGOUT: "LOGOUT"
 });
 
 export default ACTION_TYPES;
