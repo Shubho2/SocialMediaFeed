@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { AppBar, Button, Typography, Toolbar, Avatar } from '@material-ui/core';
+import { AppBar, Button, Typography, Toolbar, Avatar } from '@mui/material';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 
@@ -36,7 +36,7 @@ const NavBar = ({ user, setUser }) => {
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
             <div className={classes.brandContainer}>
-                <Typography component={NavLink} to="/" className={classes.heading} variant="h2" align="center">Memories</Typography>
+                <Typography component={NavLink} to="/" className={classes.heading} variant="h2" align="left">Memories</Typography>
                 <img className={classes.image} src={memories} alt="icon" height="60" />
             </div>
             <Toolbar className={classes.toolbar}>
