@@ -1,7 +1,8 @@
 import axios from 'axios';
 import { extractUserData } from '../utils/helper';
 
-const API = axios.create({ baseURL: process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001', accessControlAllowOrigin: '*' });
+const API = axios.create();
+API.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5001';
 
 API.interceptors.request.use((request) => {
     let user = extractUserData();
